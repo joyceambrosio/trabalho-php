@@ -23,6 +23,23 @@ class Usuario
         $this->senha = $senha;
     }
 
+    public function fromObject($object){
+        $this->id = $object->id;
+        $this->nome = $object->nome;
+        $this->usuario = $object->usuario;
+        $this->senha = $object->senha;
+    }
+
+    /**
+     * @param $senha
+     * @return bool
+     */
+    public function validarSenha($senha)
+    {
+        return ($this->senha == $senha);
+
+    }
+
     /**
      * @return mixed
      */
@@ -86,8 +103,5 @@ class Usuario
     {
         $this->senha = $senha;
     }
-
-
-
 
 }

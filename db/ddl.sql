@@ -13,17 +13,33 @@ CREATE TABLE Usuario(
 	CONSTRAINT pkUsuario PRIMARY KEY (idUsuario)
 );
 
+
 CREATE TABLE Cliente(
 	idCliente INT NOT NULL AUTO_INCREMENT,
 	nome VARCHAR(255) NOT NULL,
 	cpf VARCHAR(15) NOT NULL,
 	dataNascimento DATE NOT NULL,
 	telefone VARCHAR(15) NOT NULL,
-	endereco VARCHAR(50) NOT NULL,
 	email VARCHAR(45) NOT NULL,
 	senha VARCHAR(8) NOT NULL,
 
 	CONSTRAINT pkCliente PRIMARY KEY (idCliente)
+
+);
+
+CREATE TABLE Endereco(
+	idEndereco INT NOT NULL AUTO_INCREMENT,
+	idCliente INT NOT NULL,
+	logradouro VARCHAR(50) NOT NULL,
+	numero VARCHAR(5) NOT NULL,
+	bairro VARCHAR(20) NOT NULL,
+	cep VARCHAR(15) NOT NULL,
+	cidade VARCHAR(25) NOT NULL,
+	uf VARCHAR(2) NOT NULL,
+	
+	CONSTRAINT pkEndereco PRIMARY KEY (idEndereco),
+	CONSTRAINT fkEClienteEndereco FOREIGN KEY (idCliente)
+    	REFERENCES Cliente(idCliente)
 
 );
 
