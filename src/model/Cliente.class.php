@@ -11,7 +11,7 @@ class Cliente
     private $telefone;
     private $email;
     private $senha;
-    private Endereco $endereco;
+    private $endereco;
 
     /**
      * Cliente constructor.

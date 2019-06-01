@@ -10,7 +10,7 @@ class Servico
     private $nome;
     private $descricao;
     private $valor;
-    private Tipo $tipo;
+    private $tipo;
     private $disponibilidade;
 
     /**

@@ -9,8 +9,8 @@ class Venda
     private $id;
     private $valorTotal;
     private $quantidadeItens;
-    private Cliente $cliente;
-    private Servico $servico;
+    private $cliente;
+    private $servico;
 
     /**
      * Venda constructor.
