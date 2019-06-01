@@ -13,6 +13,18 @@ class ServicoDao
 		$this->conn = $c->getConexao();
 	}
 
+	//incluir serviço
+
+	public function incluirServico(Servico $servico){
+		$sql = $this->conn->prepare("INSERT INTO servicos (nome, descricao, valor) values (:nom, :descr, :valor)");
+
+		$sql->bindValue(':nom', $servico->getNome());
+		$sql->bindValue(':descr', $servico->getDescricao());
+		$sql->bindValue(':valor', $servico->getValor());
+		$sql->execute();
+	}
+
+
 	//PEGAR SERVIÇO PELO ID
 
 	public function get($id)
@@ -23,6 +35,8 @@ class ServicoDao
 		return $sql->fetch(PDO::FETCH_OBJ);
 	}
 
+
+
 	//listar serviços
 
 	public function getList(){
@@ -32,6 +46,12 @@ class ServicoDao
 			$lista[] = $servico;
 		}
 		return $lista;
+	}
+
+	//excluir serviço
+
+	function excluirServico(){
+		
 	}
 
 
