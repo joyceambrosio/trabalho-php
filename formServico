@@ -23,6 +23,12 @@
            	<form id='servico' action="src/controler/controlerServico.php" method="post">
            		<input type="text" name="id_servico">
            		<input type="text" name="nome_sevico">
+           		<input type="text" name="descricao_servico">
+           		<input type="text" name="valor_servico">
+
+           		<input type="hidden" name="form_opcao" value="1">
+           		<input type="submit" name="Cadastrar">
+           		<input type="reset" name="Cancelar">
            		
            	</form>
         </div>
