@@ -7,6 +7,8 @@ session_start();
 
 $opcao = $_REQUEST['form_opcao'];
 
+//criar serviço
+
 if ($opcao == 1) {
     $servico = new Servico($_REQUEST['id_servico'], $_REQUEST['nome_servico'], $_REQUEST['descricao_servico'], $_REQUEST['valor_servico']);
 
@@ -16,6 +18,9 @@ if ($opcao == 1) {
     header("Location:../controler/servicoControler.php?form_opcao=2");
 
 }
+
+//listar serviços
+
 if ($opcao == 2) {
 
     $dao = new ServicoDao();
@@ -28,6 +33,8 @@ if ($opcao == 2) {
 
 }
 
+//excluir serviço
+
 if ($opcao == 3) {
     $id = (int)$_REQUEST['id_servico'];
     $servicoDao = new ServicoDao();
@@ -35,6 +42,12 @@ if ($opcao == 3) {
     $servicoDao->excluirServico($id);
 
     header("Location:../controler/servicoControler.php?form_opcao=2");
+}
+
+//atualizar serviço
+
+if ($opcao == 4) {
+    
 }
 
 

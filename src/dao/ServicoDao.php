@@ -50,14 +50,24 @@ class ServicoDao
 
 	//excluir serviço
 
-	function excluirServico($id){
+	public function excluirServico($id){
 		$sql = $this->conn->prepare("DELETE FROM servico WHERE idServico = :id");
 
 		$sql->bindValue(":id", $id);
 		$sql->execute();
 	}
 
+	//atualizar serviço
 
+	public function atualizarServico(Servico $servico){
+		$sql = $this->conn->prepare("UPDATE servico SET nome = :nome, descricao = :descr, valor = :valor, idTipo = :idTipo WHERE idServico = :id" );
+		$sql->bindValue(':nome', $servico->getNome());
+		$sql->bindValue(':descr', $servico->getDescricao());
+		$sql->bindValue(':valor', $servico->getValor());
+		$sql->bindValue(':idTipo', $servico->getTipo());
+		$sql->execute();
+
+	}
 }
 
 ?>
