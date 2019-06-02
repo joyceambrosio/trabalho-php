@@ -64,7 +64,7 @@ class UsuarioDao
         $sql->execute();
     }
 
-    public function remove(IModel $id)
+    public function remove(Cliente $id)
     {
         $sql = $this->conn->prepare("DELETE FROM  usuario WHERE idUsuario = :id");
         $sql->bindValue(':id', $id);

@@ -13,21 +13,9 @@ class Endereco
 
     /**
      * Endereco constructor.
-     * @param $logradouro
-     * @param $numero
-     * @param $bairro
-     * @param $cep
-     * @param $cidade
-     * @param $uf
      */
-    public function __construct($logradouro, $numero, $bairro, $cep, $cidade, $uf)
+    public function __construct()
     {
-        $this->logradouro = $logradouro;
-        $this->numero = $numero;
-        $this->bairro = $bairro;
-        $this->cep = $cep;
-        $this->cidade = $cidade;
-        $this->uf = $uf;
     }
 
     /**

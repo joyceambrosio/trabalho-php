@@ -1,7 +1,5 @@
 <?php
 
-require_once "Endereco.php";
-
 class Cliente
 {
     private $id;
@@ -15,21 +13,10 @@ class Cliente
 
     /**
      * Cliente constructor.
-     * @param $nome
-     * @param $cpf
-     * @param $dataNascimento
-     * @param $telefone
-     * @param $email
-     * @param $senha
      */
-    public function __construct($nome, $cpf, $dataNascimento, $telefone, $email, $senha)
+    public function __construct()
     {
-        $this->nome = $nome;
-        $this->cpf = $cpf;
-        $this->dataNascimento = $dataNascimento;
-        $this->telefone = $telefone;
-        $this->email = $email;
-        $this->senha = $senha;
+
     }
 
     /**
@@ -41,7 +28,7 @@ class Cliente
     }
 
     /**
-     * @param mixed $id
+     * @param mixed $idCliente
      */
     public function setId($id): void
     {

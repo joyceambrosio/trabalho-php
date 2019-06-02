@@ -1,23 +1,24 @@
-INSERT INTO 'usuario'('nome', 'usuario', 'senha') 
+INSERT INTO  usuario ( nome ,  usuario ,  senha ) 
 VALUES 
-("Joyce Ambrosio", "joyce", '123456'),
-("Milena Souza", "milena", '123456'),
-("Thamires Gualandi", "thamires", '123456');
+("Joyce Ambrosio", "joyce",  123456 ),
+("Milena Souza", "milena",  123456 ),
+("Thamires Gualandi", "thamires",  123456 );
 
 
 
-INSERT INTO 'cliente'('nome', 'cpf', 'dataNascimento', 'telefone', 'email', 'senha') 
+INSERT INTO  cliente ( nome ,  cpf ,  dataNascimento ,  telefone ,  email ,  senha ) 
 VALUES 
-("Geraldo Lúcio", "80928389090", 1965-11-01, "2899999999", "geraldo@email.com", "123456"),
-("Vitor Andrade", "80928389090", 1965-11-01, "2899999999", "vitor@email.com", "123456"),
-("Marli Oliveira", "80928389090", 1965-11-01, "2899999999", "marli@email.com", "123456"),
-("Erick Ambrosio", "80928389090", 1965-11-01, "2899999999", "erick@email.com", "123456"),
-("Sillas Mariano", "80928389090", 1965-11-01, "2899999999", "sillas@email.com", "123456"),
-("Jessica Leal", "80928389090", 1965-11-01, "2899999999", "jessica@email.com", "123456"),
-("Lucas Leal", "80928389090", 1965-11-01, "2899999999", "lucas@email.com", "123456"),
-("Darcilia Penna", "80928389090", 1965-11-01, "2899999999", "darcilia@email.com", "123456");
+("Geraldo Lúcio", "80928389090", "1903-07-12", "2899999999", "geraldo@email.com", "123456"),
+("Vitor Andrade", "80928389090", "1910-11-17", "2899999999", "vitor@email.com", "123456"),
+("Marli Oliveira", "80928389090", "1922-10-19", "2899999999", "marli@email.com", "123456"),
+("Erick Ambrosio", "80928389090", "1863-04-12", "2899999999", "erick@email.com", "123456"),
+("Sillas Mariano", "80928389090", "1965-11-01", "2899999999", "sillas@email.com", "123456"),
+("Jessica Leal", "80928389090", "1965-11-01", "2899999999", "jessica@email.com", "123456"),
+("Lucas Leal", "80928389090", "1965-11-01", "2899999999", "lucas@email.com", "123456"),
+("Darcilia Penna", "80928389090", "1965-11-01", "2899999999", "darcilia@email.com", "123456");
 
-INSERT INTO 'endereco'('idCliente', 'logradouro', 'numero', 'bairro', 'cep', 'cidade', 'uf') 
+
+INSERT INTO  endereco ( idCliente ,  logradouro ,  numero ,  bairro ,  cep ,  cidade ,  uf ) 
 VALUES 
 ( 1, "Rua número 1 ", "1", "Bairro numero 1", "29500000", "Alegre", "ES"),
 ( 2, "Rua número 2 ", "2", "Bairro numero 2", "29500000", "Alegre", "ES"),
@@ -30,7 +31,7 @@ VALUES
 
 
 
-INSERT INTO 'tipo'('nome', 'valor') 
+INSERT INTO  tipo ( nome ,  valor ) 
 VALUES 
 ("Informatica", 10.00),
 ("Saúde", 20.00),
@@ -38,7 +39,7 @@ VALUES
 ("Transporte", 10.00);
 
 
-INSERT INTO 'servico'('nome', 'descricao', 'valor', 'idTipo') 
+INSERT INTO  servico ( nome ,  descricao ,  valor ,  idTipo ) 
 VALUES 
 ("Manutenção de Computadores", "Serviço de Manutenção de Computadores para Empresas", 300.00, 1),
 ("Manutenção de Computadores", "Serviço de Manutenção de Computadores para Pessoas Físicas", 150.00, 1),
@@ -49,11 +50,11 @@ VALUES
 ("Mudança", "Transporte de móveis", 90.00, 4);
 
 
-INSERT INTO 'disponibilidade'('idServico', 'data', 'status') 
+INSERT INTO  disponibilidade ( idServico ,  data ,  status ) 
 VALUES ()
 
 
-INSERT INTO 'venda'('idCliente', 'idServico', 'valorTotal', 'quantidadeItens') 
+INSERT INTO  venda ( idCliente ,  idServico ,  valorTotal ,  quantidadeItens ) 
 VALUES ()
 
 

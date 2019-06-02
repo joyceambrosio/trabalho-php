@@ -22,7 +22,7 @@
                 <p>Por favor, informe nome de usuário e senha</p>
             </div>
 
-            <form id="Login" action="src/controler/loginControler.php" method="post">
+            <form id="Login" action="src/controler/LoginControler.php" method="post">
 
                 <div class="form-group">
                     <input type="text" class="form-control" name="usuario_form"

@@ -3,8 +3,6 @@
 require_once '../dao/UsuarioDao.php';
 require_once '../model/Usuario.class.php';
 
-echo $_SERVER["DOCUMENT_ROOT"];
-
 session_start();
 
 if (isset($_REQUEST['usuario_form']) && isset($_REQUEST['senha_form'])) {
