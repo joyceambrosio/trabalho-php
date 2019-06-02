@@ -80,9 +80,11 @@ class ClienteDao
         $sql->bindValue(':senha', $entidade->getSenha());
 
         $dao = new EnderecoDao();
-        $dao->create($entidade->getEndereco(), $entidade->getId());
 
         $sql->execute();
+
+        $dao->create($entidade->getEndereco(), $this->conn->lastInsertId());
+
     }
 
     public function update(Cliente $entidade)
@@ -96,10 +98,12 @@ class ClienteDao
         $sql->bindValue(':senha', $entidade->getSenha());
         $sql->bindValue(':senha', $entidade->getId());
 
+        $sql->execute();
+
         $dao = new EnderecoDao();
         $dao->update($entidade->getEndereco());
 
-        $sql->execute();
+
     }
 
     public function remove(Cliente $id)

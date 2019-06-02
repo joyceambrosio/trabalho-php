@@ -25,21 +25,18 @@ if ($opcao == 1) {
 
 if ($opcao == 2) {
 
-    $servicos = array();
-    $servicos = daoServico->getList();
-
+    //cria a dao
     $dao = new ServicoDao();
 
-    //$_SESSION[$servicos] = $dao->getList();
+    //recupera a lista de Serviços na dao
+    $servicos = $dao->getList();
 
-    $temp = $_SESSION[$servicos];
+    //passa essa lista pra sessão
+    $_SESSION['servicos'] = $dao->getList();
 
-        echo '<pre>';
-        echo var_dump($temp);
+    //encaminha pra página
 
-        echo '</pre>';
-
-   // header("Location:../exibirServico.php");
+   header("Location:../../exibirServico.php");
 }
 
 //excluir serviço
