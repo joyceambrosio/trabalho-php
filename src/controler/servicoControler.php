@@ -28,7 +28,7 @@ if ($opcao == 2) {
     $lista = $dao->getList();
 
     echo "<pre>";
-    echo "<h1>lista de cliente</h1>";
+    echo "<h1>lista de serviços</h1>";
     var_dump($lista);
     echo "</pre>";
 
