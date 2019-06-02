@@ -28,7 +28,7 @@
               <label>Tipo:</label>
               <select name="tipo_servico">
                 <?php foreach ($tipos as $tipo) {
-                  echo "<option value=".$tipo->nome.">".$tipo->getNome();"</option>";
+                  echo "<option value=".$tipo->getNome();"</option>";
                 }
 
                 ?>
