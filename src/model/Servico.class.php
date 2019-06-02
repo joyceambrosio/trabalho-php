@@ -1,8 +1,5 @@
 <?php
 
-require_once "Tipo.php";
-require_once "Disponibilidade.php";
-
 class Servico
 {
 

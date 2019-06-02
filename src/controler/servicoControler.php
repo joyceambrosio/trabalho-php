@@ -1,7 +1,7 @@
 <?php
 
 require_once("../dao/ServicoDao.php");
-require_once("../model/Servico.inc.php");
+require_once("../model/Servico.class.php");
 
 session_start();
 
@@ -15,10 +15,7 @@ if ($opcao == 1) {
 
 	header("Location:../controler/servicoControler.php?opcao=2");
 
-
 }
 
-
-	
 
 ?>
