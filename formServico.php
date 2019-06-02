@@ -8,7 +8,9 @@
     <title>Document</title>
 
     <?php include_once('templates/head.inc.php');
+    include_once('src/model/Tipo.class.php');
     session_start();
+
     ?>
 </head>
 <body id='formServico'>
@@ -24,12 +26,19 @@
            		<label>Nome Serviço:</label><input type="text" name="nome_servico"><br>
            		<label>Descrição:</label><input type="text" name="descricao_servico"><br>
            		<label>Valor:</label><input type="text" name="valor_servico"><br>
-              <label>Tipo:</label><input type="text" name="tipo_servico"><br>
-              
+
+         
+              <label for="form_tipo">Tipo:</label>
+                <select id="form_tipo" name="form_tipo">
+                  <option value="1">Informatica</option>
+                  <option value="2">Saúde</option>
+                  <option value="3">Limpeza</option>
+                  <option value="4">Transporte</option>
+                </select><br>
 
            		<input type="hidden" name="form_opcao" value="1">
-           		<input type="submit" name="Cadastrar">
-           		<input type="reset" name="Cancelar">
+           		<input type="submit" name="Cadastrar" value="Cadastrar">
+           		<input type="reset" name="Cancelar" value="Cancelar">
            		
            	</form>
         </div>

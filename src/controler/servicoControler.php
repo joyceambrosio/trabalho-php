@@ -2,10 +2,11 @@
 
 require_once("../dao/ServicoDao.php");
 require_once("../model/Servico.class.php");
+require_once("../dao/TipoDao.php");
 
 session_start();
 
-$opcao = $_REQUEST['form_opcao'];
+$opcao =(int) $_REQUEST['form_opcao'];
 
 //criar serviço
 
@@ -14,9 +15,9 @@ if ($opcao == 1) {
 
     $servicoDao = new ServicoDao();
     $servicoDao->incluirServico($servico);
-    var_dump($servico);
+    //var_dump($servico);
 
-   //header("Location:../controler/servicoControler.php?form_opcao=2");
+    //header("Location:../controler/servicoControler.php?form_opcao=5");
 
 }
 
@@ -24,14 +25,12 @@ if ($opcao == 1) {
 
 if ($opcao == 2) {
 
+
     $dao = new ServicoDao();
-    $lista = $dao->getList();
 
-    echo "<pre>";
-    echo "<h1>lista de serviços</h1>";
-    var_dump($lista);
-    echo "</pre>";
+    $_SESSION['servicos'] = $dao->getList();
 
+    header("Location:../exibirServico.php");
 }
 
 //excluir serviço
@@ -51,5 +50,16 @@ if ($opcao == 4) {
     
 }
 
+//passar os tipos de serviços para o formulário de serviço
+
+if($opcao == 5){
+    //$dao = new TipoDao();
+
+    //$_SESSION['tipos'] = $dao->getTipo();
+
+
+    header("Location:../formServico.php");
+
+}
 
 ?>
