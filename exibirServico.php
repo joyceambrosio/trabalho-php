@@ -32,8 +32,7 @@
                    
                 }
 
-                
-                   
+                                   
             		// echo "<td> <a href='controler/servicoControler.php?opcao=4&id=".$servico->idServico."'>Alterar</a>";
             		//echo "<a href='controler/servicoControler.php?opcao=3&id=".$servico->idServico."'>Excluir Serviço </a>"; -->
             
