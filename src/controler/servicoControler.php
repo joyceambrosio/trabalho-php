@@ -11,7 +11,7 @@ $opcao =(int) $_REQUEST['form_opcao'];
 //criar serviço
 
 if ($opcao == 1) {
-    $servico = new Servico($_REQUEST['nome_servico'], $_REQUEST['descricao_servico'], $_REQUEST['valor_servico'], $_REQUEST['tipo_servico']);
+    $servico = new Servico($_REQUEST['nome_servico'], $_REQUEST['descricao_servico'], $_REQUEST['valor_servico'], $_REQUEST['form_tipo']);
 
     $servicoDao = new ServicoDao();
     $servicoDao->incluirServico($servico);
@@ -42,12 +42,12 @@ if ($opcao == 2) {
 //excluir serviço
 
 if ($opcao == 3) {
-    $id = (int)$_REQUEST['id_servico'];
+    $id = (int)$_REQUEST['id'];
     $servicoDao = new ServicoDao();
 
     $servicoDao->excluirServico($id);
 
-    header("Location:../controler/servicoControler.php?form_opcao=2");
+    header("Location:servicoControler.php?form_opcao=2");
 }
 
 //atualizar serviço
@@ -59,12 +59,12 @@ if ($opcao == 4) {
 //passar os tipos de serviços para o formulário de serviço
 
 if($opcao == 5){
-    //$dao = new TipoDao();
+    $dao = new TipoDao();
 
-    //$_SESSION['tipos'] = $dao->getTipo();
+    $_SESSION['tipos'] = $dao->getTipo();
 
 
-    header("Location:../formServico.php");
+    header("Location:../../formServico.php");
 
 }
 

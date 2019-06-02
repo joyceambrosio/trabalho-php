@@ -15,6 +15,7 @@
                 <th>Descrição:</th>
                 <th>Valor:</th>
                 <th>Tipo:</th>
+                <th>Operação:</th>
             </tr>
 
             <?php
@@ -29,12 +30,9 @@
                     echo "<td>".$servico->descricao."</td>";
                     echo "<td>".$servico->valor."</td>";
                     echo "<td>".$servico->idTipo."</td>";
-                   
-                }
-
-                                   
-            		// echo "<td> <a href='controler/servicoControler.php?opcao=4&id=".$servico->idServico."'>Alterar</a>";
-            		//echo "<a href='controler/servicoControler.php?opcao=3&id=".$servico->idServico."'>Excluir Serviço </a>"; -->
+                    echo "<td> <a href='../src/controler/servicoControler.php?opcao=4&id=".$servico->idServico."'>Alterar</a>";
+                    echo "<a href='../src/controler/servicoControler.php?opcao=3&id=".$servico->idServico."'>Excluir</a>"; 
+                }                              		
             
              } ?>
 

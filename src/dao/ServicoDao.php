@@ -26,7 +26,7 @@ class ServicoDao
 	}
 
 
-	//PEGAR SERVIÇO PELO ID
+	//pegar serviço pelo id
 
 	public function get($id)
 	{
@@ -51,7 +51,11 @@ class ServicoDao
 
 	//excluir serviço
 
-	public function excluirServico($id){
+	public function excluirServico(Servico $id){
+
+		$dao = new ServicoDao();
+		$dao->excluirServico($id);
+		
 		$sql = $this->conn->prepare("DELETE FROM servico WHERE idServico = :id");
 
 		$sql->bindValue(":id", $id);
