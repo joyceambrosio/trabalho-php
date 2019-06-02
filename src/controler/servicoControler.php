@@ -8,14 +8,15 @@ session_start();
 $opcao = $_REQUEST['form_opcao'];
 
 if ($opcao == 1) {
-	$servico = new Servico($_REQUEST['id_servico'], $_REQUEST['nome_servico'], $_REQUEST['descricao_servico'], $_REQUEST['valor_servico']);
+    $servico = new Servico($_REQUEST['id_servico'], $_REQUEST['nome_servico'], $_REQUEST['descricao_servico'], $_REQUEST['valor_servico']);
 
-	$servicoDao = new ServicoDao();
-	$servicoDao->incluirServico($servico);
+    $servicoDao = new ServicoDao();
+    $servicoDao->incluirServico($servico);
 
-	header("Location:../controler/servicoControler.php?form_opcao=2");
+    header("Location:../controler/servicoControler.php?form_opcao=2");
 
-}if ($opcao == 2){
+}
+if ($opcao == 2) {
 
     $dao = new ServicoDao();
     $lista = $dao->getList();

@@ -33,7 +33,10 @@ switch ($opcao) {
 
         break;
     case 3:
-        echo "Opcao 3 ainda não implementada";
+        echo "Edicao ainda não implementada";
+        break;
+    case 4:
+        echo "Remocao 3 ainda não implementada";
         break;
     default:
         header("Location:../../400.php");
