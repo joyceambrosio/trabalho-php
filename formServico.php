@@ -20,7 +20,7 @@
             	<h2>Cadastro de Serviços</h2>
            	</div>
 
-           	<form id='servico' action="src/controler/controlerServico.php" method="post">
+           	<form id='servico' action="src/controler/servicoControler.php" method="post">
            		<input type="text" name="id_servico">
            		<input type="text" name="nome_sevico">
            		<input type="text" name="descricao_servico">

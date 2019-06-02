@@ -16,7 +16,7 @@ class ServicoDao
 	//incluir serviço
 
 	public function incluirServico(Servico $servico){
-		$sql = $this->conn->prepare("INSERT INTO servicos (nome, descricao, valor) values (:nom, :descr, :valor)");
+		$sql = $this->conn->prepare("INSERT INTO servico (nome, descricao, valor) values (:nom, :descr, :valor)");
 
 		$sql->bindValue(':nom', $servico->getNome());
 		$sql->bindValue(':descr', $servico->getDescricao());
@@ -29,7 +29,7 @@ class ServicoDao
 
 	public function get($id)
 	{
-		$sql = $this->conn->prepare("SELECT * FROM servicos WHERE idServico = :id");
+		$sql = $this->conn->prepare("SELECT * FROM servico WHERE idServico = :id");
 		$sql->bindValue(':id', $id);
 		$sql->execute();
 		return $sql->fetch(PDO::FETCH_OBJ);
@@ -40,9 +40,9 @@ class ServicoDao
 	//listar serviços
 
 	public function getList(){
-		$rs = $this->conn->query("SELECT * FROM servicos");
+		$rs = $this->conn->query("SELECT * FROM servico");
 		$lista = array();
-		While($servico = $rs->fetch(PDO::FETCH_OBJ)){
+		while($servico = $rs->fetch(PDO::FETCH_OBJ)){
 			$lista[] = $servico;
 		}
 		return $lista;

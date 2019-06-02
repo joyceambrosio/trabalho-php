@@ -13,7 +13,17 @@ if ($opcao == 1) {
 	$servicoDao = new ServicoDao();
 	$servicoDao->incluirServico($servico);
 
-	header("Location:../controler/servicoControler.php?opcao=2");
+	header("Location:../controler/servicoControler.php?form_opcao=2");
+
+}if ($opcao == 2){
+
+    $dao = new ServicoDao();
+    $lista = $dao->getList();
+
+    echo "<pre>";
+    echo "<h1>lista de cliente</h1>";
+    var_dump($lista);
+    echo "</pre>";
 
 }
 

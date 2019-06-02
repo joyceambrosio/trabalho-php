@@ -24,11 +24,11 @@ switch ($opcao) {
     case 2:
 
         $dao = new ClienteDao();
-        $cliente = $dao->getList();
+        $lista = $dao->getList();
 
         echo "<pre>";
         echo "<h1>lista de cliente</h1>";
-        var_dump($cliente);
+        var_dump($lista);
         echo "</pre>";
 
         break;
