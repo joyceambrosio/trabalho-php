@@ -21,10 +21,18 @@
            	</div>
 
            	<form id='servico' action="src/controler/servicoControler.php" method="post">
-           		<input type="text" name="id_servico">
-           		<input type="text" name="nome_sevico">
-           		<input type="text" name="descricao_servico">
-           		<input type="text" name="valor_servico">
+           		<label>Nome Serviço:</label><input type="text" name="nome_sevico"><br>
+           		<label>Descrição:</label><input type="text" name="descricao_servico"><br>
+           		<label>Valor:</label><input type="text" name="valor_servico"><br>
+
+              <label>Tipo:</label>
+              <select name="tipo_servico">
+                <?php foreach ($tipos as $tipo) {
+                  echo "<option value=".$tipo->nome.">".$tipo->getNome();"</option>";
+                }
+
+                ?>
+              </select><br>
 
            		<input type="hidden" name="form_opcao" value="1">
            		<input type="submit" name="Cadastrar">
