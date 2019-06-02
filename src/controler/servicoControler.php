@@ -28,5 +28,14 @@ if ($opcao == 2) {
 
 }
 
+if ($opcao == 3) {
+    $id = (int)$_REQUEST['id_servico'];
+    $servicoDao = new ServicoDao();
+
+    $servicoDao->excluirServico($id);
+
+    header("Location:../controler/servicoControler.php?form_opcao=2");
+}
+
 
 ?>
