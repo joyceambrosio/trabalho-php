@@ -50,8 +50,11 @@ class ServicoDao
 
 	//excluir serviço
 
-	function excluirServico(){
-		
+	function excluirServico($id){
+		$sql = $this->conn->prepare("DELETE FROM servico WHERE idServico = :id");
+
+		$sql->bindValue(":id", $id);
+		$sql->execute();
 	}
 
 
