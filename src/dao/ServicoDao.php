@@ -16,11 +16,12 @@ class ServicoDao
 	//incluir serviço
 
 	public function incluirServico(Servico $servico){
-		$sql = $this->conn->prepare("INSERT INTO servico (nome, descricao, valor) values (:nom, :descr, :valor)");
+		$sql = $this->conn->prepare("INSERT INTO servico (nome, descricao, valor, tipo) values (:nom, :descr, :valor, :tipo)");
 
 		$sql->bindValue(':nom', $servico->getNome());
 		$sql->bindValue(':descr', $servico->getDescricao());
 		$sql->bindValue(':valor', $servico->getValor());
+		$sql->bindValue(':tipo', $servico->getTipo());
 		$sql->execute();
 	}
 

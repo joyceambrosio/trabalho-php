@@ -10,12 +10,13 @@ $opcao = $_REQUEST['form_opcao'];
 //criar serviço
 
 if ($opcao == 1) {
-    $servico = new Servico($_REQUEST['id_servico'], $_REQUEST['nome_servico'], $_REQUEST['descricao_servico'], $_REQUEST['valor_servico']);
+    $servico = new Servico($_REQUEST['nome_servico'], $_REQUEST['descricao_servico'], $_REQUEST['valor_servico'], $_REQUEST['tipo_servico']);
 
     $servicoDao = new ServicoDao();
     $servicoDao->incluirServico($servico);
+    var_dump($servico);
 
-    header("Location:../controler/servicoControler.php?form_opcao=2");
+   //header("Location:../controler/servicoControler.php?form_opcao=2");
 
 }
 
