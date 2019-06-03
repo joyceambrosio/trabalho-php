@@ -23,7 +23,7 @@
            	</div>
 
            	<form id='servico' action="src/controler/servicoControler.php" method="post">
-           		<label>Nome Serviço:</label><input type="text" name="nome_servico"><br>
+           		<label>Nome:</label><input type="text" name="nome_servico"><br>
            		<label>Descrição:</label><input type="text" name="descricao_servico"><br>
            		<label>Valor:</label><input type="text" name="valor_servico"><br>
 

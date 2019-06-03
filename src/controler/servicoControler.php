@@ -47,12 +47,20 @@ if ($opcao == 3) {
 
     $servicoDao->excluirServico($id);
 
-    header("Location:servicoControler.php?form_opcao=2");
+    header("Location:controler/servicoControler.php?form_opcao=2");
 }
 
 //atualizar serviço
 
 if ($opcao == 4) {
+   $servico = new Servico($_REQUEST['nome_servico_at'], $_REQUEST['descricao_servico_at'], $_REQUEST['valor_servico_at'], $_REQUEST['form_tipo_at']);
+   $servico->setId($_REQUEST['servico']);
+
+   $dao = new ServicoDao();
+
+   $dao->atualizarServico($servico);
+
+   header("Location:controler/servicoControler.php?form_opcao=2");
     
 }
 
