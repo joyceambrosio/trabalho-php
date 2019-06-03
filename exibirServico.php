@@ -30,8 +30,8 @@
                     echo "<td>".$servico->descricao."</td>";
                     echo "<td>".$servico->valor."</td>";
                     echo "<td>".$servico->idTipo."</td>";
-                    echo "<td> <a href='../src/controler/servicoControler.php?opcao=4&id=".$servico->idServico."'>Alterar</a>";
-                    echo "<a href='../src/controler/servicoControler.php?opcao=3&id=".$servico->idServico."'>Excluir</a>"; 
+                    echo "<td> <a href='src/controler/servicoControler.php?form_opcao=4&id=".$servico->idServico."'>Alterar</a>";
+                    echo "<a href='src/controler/servicoControler.php?form_opcao=3&id=".$servico->idServico."'>Excluir</a>"; 
                 }                              		
             
              } ?>
