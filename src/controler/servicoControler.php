@@ -54,7 +54,7 @@ if ($opcao == 3) {
 
 if ($opcao == 4) {
    $servico = new Servico($_REQUEST['nome_servico_at'], $_REQUEST['descricao_servico_at'], $_REQUEST['valor_servico_at'], $_REQUEST['form_tipo_at']);
-   $servico->setId($_REQUEST['servico']);
+   $servico->setId($_REQUEST['id']);
 
    $dao = new ServicoDao();
 
