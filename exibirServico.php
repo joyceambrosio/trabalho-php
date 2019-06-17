@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<?php session_start(); ?>
+<?php 
+session_start();
+$servicos = $_SESSION['servicos']; 
+
+?>
 
 <html>
 <head>
@@ -20,8 +24,6 @@
 
             <?php
             require_once("src/model/Servico.class.php");
-            if (($_SESSION['servicos'])) {
-                $servicos = $_SESSION['servicos'];
 
                 foreach ($servicos as $servico) {
                     echo "<tr>";
@@ -34,7 +36,7 @@
                     echo "<a href='src/controler/servicoControler.php?form_opcao=3&id=".$servico->idServico."'>Excluir</a>"; 
                 }                              		
             
-             } ?>
+              ?>
 
 </body>
 </html>
